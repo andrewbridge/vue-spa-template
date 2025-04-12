@@ -1,9 +1,6 @@
 export default {
     name: 'Page',
     props: ['title', 'class'],
-    created() {
-        console.log(this);
-    },
     template: `
     <div :class="$props['class']">
         <div class="container-xl" v-if="title">
