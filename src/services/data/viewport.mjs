@@ -24,7 +24,6 @@ const viewport = reactive({
     xxl: false,
 });
 const updateViewport = () => {
-    console.log('updated');
     viewport.xs = matchMediaXS.matches;
     viewport.sm = matchMediaSM.matches;
     viewport.md = matchMediaMD.matches;
