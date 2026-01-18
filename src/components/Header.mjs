@@ -1,7 +1,5 @@
 import { css } from "../deps/goober.mjs";
 import Home from "../pages/Home.mjs";
-import Plus from "./icons/Plus.mjs";
-import GraphUpArrow from "./icons/GraphUpArrow.mjs";
 import viewport from "../services/data/viewport.mjs";
 
 const styles = {
@@ -73,7 +71,6 @@ export default {
     name: 'Header',
     inject: ['router'],
     data: () => ({ viewport }),
-    components: { Plus, GraphUpArrow },
     watch: {
       viewport: {
         immediate: true,
@@ -111,7 +108,7 @@ export default {
               <div class="nav-item d-flex me-3">
                 <div class="btn-list">
                   <button class="btn btn-icon" @click="openAddModal">
-                    <Plus />
+                    +
                   </button>
                 </div>
               </div>
@@ -151,7 +148,7 @@ export default {
                   :class="router.state.activeHash === link.href ? '${styles.activeTab}' : ''"
                 >
                   <div class="${styles.iosTabIcon}">
-                    <GraphUpArrow />
+                    &uarr;
                   </div>
                   <span class="nav-link-title ${styles.iosTabLabel}">
                     {{link.name}}
